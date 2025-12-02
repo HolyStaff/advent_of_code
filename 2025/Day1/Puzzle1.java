@@ -1,3 +1,4 @@
+package Day1;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -6,7 +7,7 @@ public class Puzzle1 {
     public static int password;
 
     public static void main(String[] args) {
-        File myFile = new File("example_input.txt");
+        File myFile = new File("input.txt");
         int last_number = 50;
 
         try (Scanner myReader = new Scanner(myFile)) {
@@ -49,7 +50,6 @@ public class Puzzle1 {
             last_number -= amount;
             while (last_number < 0){
                 last_number += 100;
-                increasePassword();
             }
             return last_number;
         }
@@ -57,7 +57,6 @@ public class Puzzle1 {
             last_number += amount;
             while (last_number > 99){
                 last_number -= 100;
-                increasePassword();
             }
             return last_number;
         }
