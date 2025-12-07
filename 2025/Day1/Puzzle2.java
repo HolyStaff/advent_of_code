@@ -20,9 +20,6 @@ public class Puzzle2 {
 
                 int count = calculateNewPosition(movementDirection, inputValue, last_number);
                 last_number = count;
-                if (count == 0) {
-                    password = increasePassword();
-                }
             }
             displayPassword();
         } catch (FileNotFoundException e) {
@@ -46,8 +43,14 @@ public class Puzzle2 {
     }
 
     public static int calculateNewPosition(String direction, int amount, int last_number){
+
         if (direction.equals("L")){
             last_number -= amount;
+
+            if (last_number == 0){
+                increasePassword();
+            }
+
             while (last_number < 0){
                 last_number += 100;
                 increasePassword();

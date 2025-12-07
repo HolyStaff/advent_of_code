@@ -13,7 +13,6 @@ public class Puzzle1 {
             String data = myReader.nextLine();
             String[] parts = data.split(",");
             for (String string : parts) {
-                System.out.println(string);
                 splitMinMax(string);
             }
         } catch (FileNotFoundException e) {
@@ -21,9 +20,27 @@ public class Puzzle1 {
             e.printStackTrace();
         }
 
-        public static void splitMinMax(String min_max){
-            String[] min_and_max = min_max.split("-");
+    }
+
+    public static void splitMinMax(String min_max){
+        String[] min_and_max = min_max.split("-");
+        String min = min_and_max[0];
+        String max = min_and_max[1];
+        checkInValidID(Long.parseLong(min), Long.parseLong(max));
+    }
+
+    public static long checkInValidID(long min, long max){
+        System.out.print("min: ");
+        System.out.println(min);
+        System.out.print("max: ");
+        System.out.println(max);
+        
+        for (long i = min; i < max; i++){
+            System.out.println(i);
+            
         }
 
+        return 0;
+        
     }
 }
