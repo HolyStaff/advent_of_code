@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Puzzle1 {
+public class Puzzle {
     public static int password;
 
     public static void main(String[] args) {

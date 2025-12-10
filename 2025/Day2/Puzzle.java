@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Puzzle1 {
+public class Puzzle {
     public static long total = 0;
     public static void main(String[] args) {
         File myFile = new File("input.txt");
