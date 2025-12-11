@@ -26,11 +26,9 @@ public class Puzzle {
         int largest_number = 0;
         for (char index : battery_bank.toCharArray()) {
             System.out.println(index);
-            int current_number = index;
-            System.out.println(current_number);
-            if (current_number > largest_number){
-                largest_number = current_number;
-
+            if (index > largest_number){
+                largest_number = index;
+                System.out.println(largest_number);
             }
         }
         return largest_number;
